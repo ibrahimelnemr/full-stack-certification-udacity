@@ -1,0 +1,33 @@
+<h1>Product List</h1>
+
+
+<div>Cart Amount: {{ CartAmount }}</div>
+<br />
+<div *ngFor="let item of AllCartItems">
+  <strong>{{ item.name }}</strong>
+  <br />
+  ${{ item.price }} x {{ item.quantity }}
+  <br />
+  <br />
+</div>
+<a routerLink="/cart">
+  <div class="btn btn-primary">Go to Cart</div>
+</a>
+<br />
+<br />
+<div *ngFor="let product of products">
+  <app-product-item [product]="product" (viewItemDetailsEvent)="ViewProductDetails($event)"> </app-product-item>
+  <br />
+  <button class="btn btn-primary" (click)="addToCart(product)">
+    Add to Cart
+  </button>
+  <br /><br />
+  <button class="btn btn-primary" (click)="removeFromCart(product)">
+    Remove from cart
+  </button>
+  <br />
+  <br />
+</div>
+
+<br />
+<br />

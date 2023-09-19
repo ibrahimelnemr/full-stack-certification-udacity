@@ -1,0 +1,27 @@
+<br /><br />
+
+<div *ngFor="let item of cart">
+  <strong>{{ item.name }}</strong>
+  <br />
+  ${{ item.price }} x {{ item.quantity }} 
+  
+  <button class="btn btn-primary" (click)="removeFromCart(item)">
+    Remove from cart
+  </button>
+  
+  <br />
+  <br />
+</div>
+
+Total cost: <strong>${{ totalCost }}</strong> <br /><br />
+
+<a routerLink="/checkout">
+  <div class="btn btn-primary">Checkout</div>
+</a>
+
+<br />
+<br />
+
+<a routerLink="/productlist">
+  <div class="btn btn-primary">Product List</div>
+</a>

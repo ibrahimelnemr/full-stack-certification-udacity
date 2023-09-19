@@ -1,0 +1,22 @@
+<br />
+
+<div class="lead">
+  <div class="h1">
+    {{ product.name }}
+  </div>
+  <br />
+
+  <strong>${{ product.price }}</strong>
+  <br />
+
+  <img src="{{ product.url }}" class="w-50" alt="Product Image" />
+  <br />
+
+  {{ product.description }}
+  <br />
+  <br />
+</div>
+
+<a routerLink="/productlist">
+  <div class="btn btn-primary">Back to Product List</div>
+</a>

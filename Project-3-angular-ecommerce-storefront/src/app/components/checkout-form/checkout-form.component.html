@@ -1,0 +1,110 @@
+<br />
+<div *ngFor="let item of checkoutItems">
+  <strong>{{ item.name }}</strong>
+  <br />
+  ${{ item.price }} x {{ item.quantity }}
+  <br />
+  <br />
+</div>
+
+Total cost: <strong>${{ totalCost }}</strong> <br /><br />
+
+Name must be minimum 6 characters.
+<br />
+<br />
+
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <label>Name:</label>
+  <input
+    type="text"
+    required
+    class="form-control"
+    name="name"
+    minlength="6"
+    [(ngModel)]="name"
+    #customerName="ngModel"
+    (ngModelChange)="nameChanged()"
+  />
+
+  <br />
+  <br />
+
+  <label>Address</label>
+  <input
+    type="text"
+    class="form-control"
+    name="address"
+    value="144 Valid Address St."
+    required
+    minlength="10"
+    [(ngModel)]="address"
+    #customerAddress="ngModel"
+    (ngModelChange)="addressChanged()"
+  />
+
+  <br />
+  <br />
+
+  <label>Credit Card Number</label>
+  <input
+  [(ngModel)]="cardnum"
+  #cardNumber="ngModel"
+    type="number"
+    class="form-control"
+    required
+    name="cardnum"
+    max="9999999999999999"
+    min="10000000000000000"
+    
+    (ngModelChange)="cardNumChanged()"
+    
+  />
+  <br />
+  <br />
+
+  <br />
+  <br />
+
+  <input
+    type="submit"
+    [disabled]="form.invalid"
+    class="submit"
+    value="Submit"
+  />
+</form>
+
+
+<br>
+<br>
+<div *ngIf="!nameValid">
+  <div>
+    Name must be at least 6 characters..
+  </div>
+</div>
+
+<div *ngIf="!addressValid">
+  <div>
+    Address must be at least 10 characters.
+  </div>
+</div>
+
+<div *ngIf="cardNumSmall">
+  <div>
+    Not enough digits in card number
+  </div>
+</div>
+
+<div *ngIf="cardNumLarge">
+  <div>
+    Too many digits in card number
+  </div>
+</div>
+  
+<br /><br /><br />
+<a routerLink="/productlist">
+  <div class="btn btn-primary">Return to main page</div>
+</a>
+<br /><br /><br />
+<a routerLink="/cart">
+  <div class="btn btn-primary">Go to cart</div>
+</a>

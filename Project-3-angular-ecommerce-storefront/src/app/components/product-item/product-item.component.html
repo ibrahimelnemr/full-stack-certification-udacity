@@ -1,0 +1,23 @@
+<div class="lead">
+  <div class="h1">
+    {{ product.name }}
+  </div>
+
+  <br />
+
+
+  Product ID:
+  {{ product.id }}
+  <br />
+
+  <strong>${{ product.price }}</strong>
+  <br />
+
+  <img src="{{ product.url }}" class="w-25" alt="Product Image" />
+  <br />
+
+  {{ product.description }}
+  <br />
+  <br />
+
+  <button class="btn btn-primary" (click)="viewItemDetails()">View Product Details</button>
