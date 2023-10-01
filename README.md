@@ -9,7 +9,7 @@ This repo contains the projects completed for the Udacity Full Stack JavaScript 
 * Accessing the provided URL with image information resizes an image and saves it to disk on first access, then pulls it from disk on subsequent access attempts
 * Prettier and Lint scripts should run without producing any error messages.
 
-## Project 2: Create a Postgresql and Express API
+## Project 2: Create a Storefront API with Postgresql and Express 
 * Create a postgres database and connect to it from the Node API
 * Design a basic relational database through tables, columns, and simple relationships between tables
 * Write well formed and correct SQL queries to select, update, delete, and where information
