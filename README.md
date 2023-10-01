@@ -18,7 +18,7 @@ This repo contains the projects completed for the Udacity Full Stack JavaScript 
 * Create CRUD endpoints for models in the application
 * Set up JWT tokens in the API using modern authentication methods
 
-## Project 3: Angular Ecommerce Storefront
+## Project 3: Create an Ecommerce Storefront with Angular
 * Scaffold and configure a single-page application with Angular
 * Create a logical hierarchy of components
 * Collect input from the user using controlled form elements and Angular events
