@@ -10,8 +10,6 @@ Development DB
 POSTGRES_HOST=127.0.0.1
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=password
-
-
 POSTGRES_DB=backend_storefront
 POSTGRES_DB_TEST=backend_storefront_test 
 
